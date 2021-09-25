@@ -1,0 +1,9 @@
+h1
+  = "Messages"
+
+= render "messages", messages: @messages
+
+= form_with model: @message do |form|
+  = form.hidden_field :user_id, value: 1
+  = form.label :content, "Enter message: "
+  = form.text_field :content
