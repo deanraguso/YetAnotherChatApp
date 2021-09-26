@@ -1,4 +1,4 @@
 .container-fluid
   = render "messages", messages: @messages
-
-  = render "form"
+  .fixed-bottom.mb-3
+    = render "form", message: @message, user_id: 1

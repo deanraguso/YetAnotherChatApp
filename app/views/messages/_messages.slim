@@ -1,6 +1,6 @@
-.row.justify-content-center.py-2
+.py-2
   h1.text-center
     = "Messages"
-
-  - messages.each do |message|
-    = render "message", message: message
+  #messages.row.justify-content-center
+    - messages.each do |message|
+      = render "message", message: message

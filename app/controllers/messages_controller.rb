@@ -1,12 +1,14 @@
 class MessagesController < ApplicationController
+  MAX_MESSAGES = 22
+
   def index
     @message = Message.new
-    @messages = Message.limit(10).order(:created_at)
+    @messages = Message.last(MAX_MESSAGES)
   end
 
   def create
     message = Message.create!(message_params)
-    redirect_to messages_path
+    AppendMessageJob.perform_now(message, MAX_MESSAGES)
   end
 
   private

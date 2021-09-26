@@ -60,3 +60,5 @@ gem "slim-rails", "~> 3.3"
 gem "guard", "~> 2.18"
 
 gem "guard-livereload", "~> 2.5"
+
+gem "cable_ready", "~> 4.5"

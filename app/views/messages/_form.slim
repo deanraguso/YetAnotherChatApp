@@ -1,6 +1,6 @@
 .d-flex.justify-content-center
-  = form_with model: @message, class: "w-75" do |form|
-    = form.hidden_field :user_id, value: 1
+  = form_with model: message, class: "w-75", local: false do |form|
+    = form.hidden_field :user_id, value: user_id
 
     .form-group
       = form.label :content, "Enter message: "
